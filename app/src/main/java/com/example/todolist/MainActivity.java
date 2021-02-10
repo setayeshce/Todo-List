@@ -5,6 +5,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.appcompat.widget.AppCompatEditText;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.CompoundButton;
 import android.widget.Toast;
@@ -46,7 +47,8 @@ public class MainActivity extends AppCompatActivity {
             if (ch_rememberMe.isChecked()) {
                 sharedPref.savedUsernameAndPhone(username, phonenumber);
             }
-
+            Intent i = new Intent(MainActivity.this, BoardActivity.class);
+            startActivity(i);
 
         });
 
